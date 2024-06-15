@@ -9,18 +9,45 @@ import LoginPage from './pages/LoginPage';
 import AdminRegisterPage from './pages/admin/AdminRegisterPage';
 import ChooseUser from './pages/ChooseUser';
 import User_signup from './pages/User_signup'; // Import the UserSignup component
+import Chatbot from './pages/Chatbot';
+import VideoChat from './pages/VideoChat';
 
-
+//import "./App.css";
 
 const App = () => {
   const { currentRole } = useSelector(state => state.user);
 
+  // const isConnected = useHMSStore(selectIsConnectedToRoom);
+  // const hmsActions = useHMSActions();
+
+  // useEffect(() => {
+  //   window.onunload = () => {
+  //     if (isConnected) {
+  //       hmsActions.leave();
+  //     }
+  //   };
+  // }, [hmsActions, isConnected]);
+
+
   return (
+    
     <Router>
       {currentRole === null &&
         <Routes>
           <Route path="/" element={<Homepage />} />
-          <Route path="/usersignup" element={<User_signup />} /> {/* Added UserSignup route */}
+          <Route path="/usersignup" element={<User_signup />} />
+           {/* Added UserSignup route */}
+           <Route path="/chatbot" element={<Chatbot />} />
+           {/* <Route path="/videocall" element={<VideoChat />} />
+           {isConnected ? (
+        <>
+          <Conference />
+          <Footer />
+        </>
+      ) : (
+        <JoinForm />
+      )} */}
+
 
           <Route path="/choose" element={<ChooseUser visitor="normal" />} />
           <Route path="/chooseasguest" element={<ChooseUser visitor="guest" />} />
