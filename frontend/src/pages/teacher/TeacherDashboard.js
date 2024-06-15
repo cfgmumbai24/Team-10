@@ -23,6 +23,7 @@ import TeacherHomePage from './TeacherHomePage';
 import TeacherProfile from './TeacherProfile';
 import TeacherViewStudent from './TeacherViewStudent';
 import StudentExamMarks from '../admin/studentRelated/StudentExamMarks';
+import MentorReviewForm from './MentorReviewForm';
 
 const TeacherDashboard = () => {
     const [open, setOpen] = useState(true);
@@ -78,6 +79,9 @@ const TeacherDashboard = () => {
                         <Route path='*' element={<Navigate to="/" />} />
                         <Route path="/Teacher/dashboard" element={<TeacherHomePage />} />
                         <Route path="/Teacher/profile" element={<TeacherProfile />} />
+
+                        <Route path="/Teacher/sentiment" element={<MentorReviewForm />} />
+
 
                         <Route path="/Teacher/complain" element={<TeacherComplain />} />
 

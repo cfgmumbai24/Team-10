@@ -141,6 +141,9 @@ import StudentComplain from './StudentComplain';
 import Logout from '../Logout';
 import AccountMenu from '../../components/AccountMenu';
 import { AppBar, Drawer } from '../../components/styles';
+import InternshipList from './InternshipList'
+import ScholarshipList from './ScholarshipList'
+import LoanList from './LoanList'
 
 const StudentDashboard = () => {
     const [open, setOpen] = useState(true);
@@ -208,6 +211,9 @@ const StudentDashboard = () => {
                         <Route path="/Student/subjects" element={<StudentSubjects isMarathi={isMarathi} />} />
                         <Route path="/Student/attendance" element={<ViewStdAttendance isMarathi={isMarathi} />} />
                         <Route path="/Student/complain" element={<StudentComplain isMarathi={isMarathi} />} />
+                        <Route path="/Student/internship" element={<InternshipList isMarathi={isMarathi} />} />
+                        <Route path="/Student/loan" element={<LoanList isMarathi={isMarathi} />} />
+                        <Route path="/Student/scholarship" element={<ScholarshipList isMarathi={isMarathi} />} />
                         <Route path="/logout" element={<Logout isMarathi={isMarathi} />} />
                     </Routes>
                 </Box>

@@ -74,6 +74,10 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import AnnouncementOutlinedIcon from '@mui/icons-material/AnnouncementOutlined';
 import ClassOutlinedIcon from '@mui/icons-material/ClassOutlined';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
+import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
+import SchoolIcon from '@mui/icons-material/School';
+
 
 const StudentSideBar = () => {
     const location = useLocation();
@@ -113,6 +117,28 @@ const StudentSideBar = () => {
                     </ListItemIcon>
                     <ListItemText primary={isMarathi ? 'तक्रार' : 'Complain'} />
                 </ListItemButton>
+
+                <ListItemButton component={Link} to="/Student/internship">
+    <ListItemIcon>
+        <WorkOutlineIcon color={location.pathname.startsWith("/Student/internship") ? 'primary' : 'inherit'} />
+    </ListItemIcon>
+    <ListItemText primary={isMarathi ? 'इंटर्नशिप' : 'internship'} />
+</ListItemButton>
+
+<ListItemButton component={Link} to="/Student/loan">
+    <ListItemIcon>
+        <MonetizationOnIcon color={location.pathname.startsWith("/Student/loan") ? 'primary' : 'inherit'} />
+    </ListItemIcon>
+    <ListItemText primary={isMarathi ? 'कर्ज' : 'loan'} />
+</ListItemButton>
+
+<ListItemButton component={Link} to="/Student/scholarship">
+    <ListItemIcon>
+        <SchoolIcon color={location.pathname.startsWith("/Student/scholarship") ? 'primary' : 'inherit'} />
+    </ListItemIcon>
+    <ListItemText primary={isMarathi ? 'शिष्यवृत्ती' : 'scholarship'} />
+</ListItemButton>
+
             </React.Fragment>
             <Divider sx={{ my: 1 }} />
             <React.Fragment>
