@@ -11,6 +11,9 @@ import ChooseUser from './pages/ChooseUser';
 import User_signup from './pages/User_signup'; // Import the UserSignup component
 import Chatbot from './pages/Chatbot';
 import VideoChat from './pages/VideoChat';
+import InternshipList from './pages/student/InternshipList'
+import ScholarshipList from './pages/student/ScholarshipList'
+import LoanList from './pages/student/LoanList'
 
 //import "./App.css";
 
@@ -54,6 +57,7 @@ const App = () => {
 
           <Route path="/Adminlogin" element={<LoginPage role="Admin" />} />
           <Route path="/Studentlogin" element={<LoginPage role="Student" />} />
+          
           <Route path="/Teacherlogin" element={<LoginPage role="Teacher" />} />
 
           <Route path="/Adminregister" element={<AdminRegisterPage />} />
