@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Students from "../assets/students.svg";
 import { LightPurpleButton } from '../components/buttonStyles';
 
+
 const Homepage = () => {
     return (
         <StyledContainer>
@@ -13,6 +14,12 @@ const Homepage = () => {
                     <img src={Students} alt="students" style={{ width: '100%' }} />
                 </Grid>
                 <Grid item xs={12} md={6}>
+                <div>
+      <h1>If you want to join our organization go to the link below</h1>
+      <Link to="/usersignup">
+        <button className="connect-button">Connect with Us</button>
+      </Link>
+    </div>
                     <StyledPaper elevation={3}>
                         <StyledTitle>
                             Welcome to
