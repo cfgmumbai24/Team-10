@@ -11,6 +11,7 @@ import ChooseUser from './pages/ChooseUser';
 import User_signup from './pages/User_signup'; // Import the UserSignup component
 import Chatbot from './pages/Chatbot';
 import VideoChat from './pages/VideoChat';
+import Calendar from './components/DemoApp';
 
 //import "./App.css";
 
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/usersignup" element={<User_signup />} />
            {/* Added UserSignup route */}
            <Route path="/chatbot" element={<Chatbot />} />
+           <Route path="/calendar" element={<Calendar />} />
            {/* <Route path="/videocall" element={<VideoChat />} />
            {isConnected ? (
         <>
