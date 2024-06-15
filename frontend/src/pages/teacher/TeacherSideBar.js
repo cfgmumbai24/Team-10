@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Divider, ListItemButton, ListItemIcon, ListItemText, ListSubheader } from '@mui/material';
 import { Link, useLocation } from 'react-router-dom';
-
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import HomeIcon from '@mui/icons-material/Home';
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
@@ -40,6 +40,18 @@ const TeacherSideBar = () => {
                         <AnnouncementOutlinedIcon color={location.pathname.startsWith("/Teacher/sentiment") ? 'primary' : 'inherit'} />
                     </ListItemIcon>
                     <ListItemText primary="sentiment" />
+                </ListItemButton>
+                <ListItemButton component={Link} to="/Teacher/calendar">
+                    <ListItemIcon>
+                        <CalendarMonthIcon color={location.pathname.startsWith("/Teacher/calendar") ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary= 'Calendar' />
+                </ListItemButton>
+                <ListItemButton component={Link} to="/Teacher/analysis">
+                    <ListItemIcon>
+                        <CalendarMonthIcon color={location.pathname.startsWith("/Teacher/analysis") ? 'primary' : 'inherit'} />
+                    </ListItemIcon>
+                    <ListItemText primary= 'Analysis' />
                 </ListItemButton>
 
                 

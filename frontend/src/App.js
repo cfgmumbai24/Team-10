@@ -42,7 +42,7 @@ const App = () => {
           <Route path="/usersignup" element={<User_signup />} />
            {/* Added UserSignup route */}
            <Route path="/chatbot" element={<Chatbot />} />
-           <Route path="/calendar" element={<Calendar />} />
+           
            {/* <Route path="/videocall" element={<VideoChat />} />
            {isConnected ? (
         <>
@@ -64,7 +64,6 @@ const App = () => {
 
           <Route path="/Adminregister" element={<AdminRegisterPage />} />
           <Route path="/usersignup" element={<User_signup />} /> {/* Added UserSignup route */}
-
 
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>}

@@ -77,7 +77,7 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import SchoolIcon from '@mui/icons-material/School';
-
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 const StudentSideBar = () => {
     const location = useLocation();
@@ -122,21 +122,28 @@ const StudentSideBar = () => {
     <ListItemIcon>
         <WorkOutlineIcon color={location.pathname.startsWith("/Student/internship") ? 'primary' : 'inherit'} />
     </ListItemIcon>
-    <ListItemText primary={isMarathi ? 'इंटर्नशिप' : 'internship'} />
+    <ListItemText primary={isMarathi ? 'इंटर्नशिप' : 'Internship'} />
 </ListItemButton>
 
 <ListItemButton component={Link} to="/Student/loan">
     <ListItemIcon>
         <MonetizationOnIcon color={location.pathname.startsWith("/Student/loan") ? 'primary' : 'inherit'} />
     </ListItemIcon>
-    <ListItemText primary={isMarathi ? 'कर्ज' : 'loan'} />
+    <ListItemText primary={isMarathi ? 'कर्ज' : 'Loan'} />
 </ListItemButton>
 
 <ListItemButton component={Link} to="/Student/scholarship">
     <ListItemIcon>
         <SchoolIcon color={location.pathname.startsWith("/Student/scholarship") ? 'primary' : 'inherit'} />
     </ListItemIcon>
-    <ListItemText primary={isMarathi ? 'शिष्यवृत्ती' : 'scholarship'} />
+    <ListItemText primary={isMarathi ? 'शिष्यवृत्ती' : 'Scholarship'} />
+</ListItemButton>
+
+<ListItemButton component={Link} to="/Student/calendar">
+    <ListItemIcon>
+        <CalendarMonthIcon color={location.pathname.startsWith("/Student/calendar") ? 'primary' : 'inherit'} />
+    </ListItemIcon>
+    <ListItemText primary={isMarathi ? 'कॅलेंडर' : 'Calendar'} />
 </ListItemButton>
 
             </React.Fragment>

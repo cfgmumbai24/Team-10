@@ -144,6 +144,7 @@ import { AppBar, Drawer } from '../../components/styles';
 import InternshipList from './InternshipList'
 import ScholarshipList from './ScholarshipList'
 import LoanList from './LoanList'
+import Calendar from '../../components/DemoApp';
 
 const StudentDashboard = () => {
     const [open, setOpen] = useState(true);
@@ -214,6 +215,7 @@ const StudentDashboard = () => {
                         <Route path="/Student/internship" element={<InternshipList isMarathi={isMarathi} />} />
                         <Route path="/Student/loan" element={<LoanList isMarathi={isMarathi} />} />
                         <Route path="/Student/scholarship" element={<ScholarshipList isMarathi={isMarathi} />} />
+                        <Route path="/Student/calendar" element={<Calendar />} />
                         <Route path="/logout" element={<Logout isMarathi={isMarathi} />} />
                     </Routes>
                 </Box>

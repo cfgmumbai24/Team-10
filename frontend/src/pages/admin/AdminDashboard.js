@@ -42,6 +42,8 @@ import ClassDetails from './classRelated/ClassDetails';
 import ShowClasses from './classRelated/ShowClasses';
 import AccountMenu from '../../components/AccountMenu';
 
+import Calendar from '../../components/DemoApp';
+
 const AdminDashboard = () => {
     const [open, setOpen] = useState(false);
     const toggleDrawer = () => {
@@ -133,6 +135,8 @@ const AdminDashboard = () => {
                         <Route path="/Admin/teachers/choosesubject/:id" element={<ChooseSubject situation="Norm" />} />
                         <Route path="/Admin/teachers/choosesubject/:classID/:teacherID" element={<ChooseSubject situation="Teacher" />} />
                         <Route path="/Admin/teachers/addteacher/:id" element={<AddTeacher />} />
+
+                        <Route path="/Admin/calendar" element={<Calendar />} />
 
                         <Route path="/logout" element={<Logout />} />
                     </Routes>
